@@ -7,6 +7,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
   <link href="css/style.min.css" rel="stylesheet">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/preview/preview-mobile.jpg");
+    }
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("img/preview/preview-tablet.jpg");
+      }
+    }
+
+    /* Десктоп */
+    @media (min-width: 1024px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("img/preview/preview-desktop.jpg");
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+  <!-- // Pixel Glass -->
+
 </head>
 
 <body>
