@@ -1,0 +1,22 @@
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-max) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-max) {
+    @content;
+  }
+}
