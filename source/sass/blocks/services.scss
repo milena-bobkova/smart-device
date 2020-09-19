@@ -1,0 +1,230 @@
+.services {
+  padding: 87px 0 127px;
+  background-color: $dark-grey;
+
+  @include tablet {
+    padding: 50px 0 78px;
+  }
+
+  @include mobile {
+    padding: 50px 0 34px;
+  }
+}
+
+.services__wrap {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1170px;
+
+  @include tablet {
+    width: calc(100% - 48px);
+  }
+
+  @include mobile {
+    padding: 0;
+    width: calc(100% - 30px);
+  }
+}
+
+.services__wrap h2 {
+  @include reset;
+
+  margin-bottom: 52px;
+
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  @include tablet {
+    width: 88%;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  @include mobile {
+    margin-left: 10px;
+    margin-bottom: 43px;
+    width: 100%;
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+}
+
+.services__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services__item {
+  position: relative;
+
+  width: 31.6%;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    content: "";
+
+    width: 64px;
+    height: 61px;
+
+    background-color: $blue;
+    background-image: url("../img/tick-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-90deg);
+  }
+
+  @include tablet {
+    margin-bottom: 46px;
+    width: 100%;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
+}
+
+.services__item p {
+  position: absolute;
+  top: 32px;
+  left: 45px;
+
+  width: 49%;
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: $white;
+
+  @include tablet {
+    top: 20px;
+    width: 25%;
+  }
+
+  @include mobile {
+    top: 0;
+    left: 35px;
+    width: 55%;
+  }
+}
+
+.services__item--accessories p {
+  @include tablet {
+    top: 30px;
+  }
+
+  @include mobile {
+    top: 10px;
+  }
+}
+
+.services__link {
+  display: block;
+
+  max-width: 370px;
+  min-height: 620px;
+  background-color: #c4c4c4;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    max-width: 100%;
+    min-height: 256px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    min-height: 256px;
+  }
+}
+
+.services__link--production {
+  background-image: url("../img/production-desktop@1x.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/production-desktop@2x.jpg");
+  }
+
+  @include tablet {
+    background-image: url("../img/production-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-tablet@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    background-image: url("../img/production-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-mobile@2x.jpg");
+    }
+  }
+}
+
+.services__link--mounting {
+  background-image: url("../img/mounting-desktop@1x.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/mounting-desktop@2x.jpg");
+  }
+
+  @include tablet {
+    background-image: url("../img/mounting-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/mounting-tablet@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    background-image: url("../img/mounting-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/mounting-mobile@2x.jpg");
+    }
+  }
+}
+
+.services__link--accessories {
+  background-image: url("../img/accessories-desktop@1x.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/accessories-desktop@2x.jpg");
+  }
+
+  @include tablet {
+    background-image: url("../img/accessories-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/accessories-tablet@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    background-image: url("../img/accessories-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/accessories-mobile@2x.jpg");
+    }
+  }
+}

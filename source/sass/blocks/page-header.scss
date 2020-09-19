@@ -2,32 +2,32 @@
   padding-top: 33px;
 
   background-color: $dark-grey;
-  background-image: url(../img/intro-bg-desktop@1x.png);
+  background-image: url("../img/intro-bg-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url(../img/intro-bg-desktop@2x.png);
+    background-image: url("../img/intro-bg-desktop@2x.png");
   }
 
   @include tablet {
     padding-top: 20px;
 
-    background-image: url(../img/intro-bg-tablet@1x.png);
+    background-image: url("../img/intro-bg-tablet@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url(../img/intro-bg-tablet@2x.png);
+      background-image: url("../img/intro-bg-tablet@2x.png");
     }
   }
 
   @include mobile {
     padding-top: 17px;
 
-    background-image: url(../img/intro-bg-mobile@1x.png);
+    background-image: url("../img/intro-bg-mobile@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url(../img/intro-bg-mobile@2x.png);
+      background-image: url("../img/intro-bg-mobile@2x.png");
     }
   }
 }
@@ -90,7 +90,7 @@
 }
 
 .page-header__logo-name {
-  font-family: "RobotoCondensed";
+  font-family: "RobotoCondensed", sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
@@ -98,7 +98,7 @@
 }
 
 .page-header__logo-description {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -249,11 +249,11 @@
 .page-header__button {
   margin-right: 0.5%;
   padding: 11px 27px 11px 26px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid $white;
   box-sizing: border-box;
   border-radius: 5px;
 
-  font-family: "RobotoCondensed";
+  font-family: "RobotoCondensed", sans-serif;
   font-weight: 700;
   font-size: 14px;
   text-align: center;
@@ -277,7 +277,7 @@
   display: flex;
   justify-content: space-between;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -286,12 +286,12 @@
 
     width: 705px;
     height: 515px;
-    background-image: url(../img/printed-board-desktop@1x.png);
+    background-image: url("../img/printed-board-desktop@1x.png");
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url(../img/printed-board-desktop@2x.png);
+      background-image: url("../img/printed-board-desktop@2x.png");
     }
 
     @include tablet {
@@ -301,12 +301,12 @@
       width: 260px;
       height: 340px;
 
-      background-image: url(../img/printed-board-tablet@1x.png);
+      background-image: url("../img/printed-board-tablet@1x.png");
       background-repeat: no-repeat;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url(../img/printed-board-tablet@2x.png);
+        background-image: url("../img/printed-board-tablet@2x.png");
       }
     }
 
@@ -318,18 +318,18 @@
       height: 220px;
       transform: scale(0.98);
 
-      background-image: url(../img/printed-board-mobile@1x.png);
+      background-image: url("../img/printed-board-mobile@1x.png");
       background-repeat: no-repeat;
       background-position: top right;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url(../img/printed-board-mobile@2x.png);
+        background-image: url("../img/printed-board-mobile@2x.png");
       }
     }
   }
 
-  &:after {
+  &::after {
     position: absolute;
     top: 12px;
     right: 83px;
@@ -338,7 +338,7 @@
 
     width: 612px;
     height: 488px;
-    background-image: url(../img/polygons.svg);
+    background-image: url("../img/polygons.svg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -364,7 +364,7 @@
   }
 
   @include tablet {
-   padding-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -396,7 +396,7 @@
 
   margin: 57px 0 27px;
 
-  font-family: "RobotoCondensed";
+  font-family: "RobotoCondensed", sans-serif;
   font-weight: bold;
   font-size: 80px;
   line-height: 94px;
@@ -435,7 +435,7 @@
   line-height: 34px;
   color: $white;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 15px;
     left: -90px;
@@ -455,7 +455,7 @@
     font-size: 18px;
     line-height: 156.8%;
 
-    &:before {
+    &::before {
       position: absolute;
       top: 16px;
       left: -48px;
@@ -487,7 +487,7 @@
   background-color: $blue;
   border-radius: 5px;
 
-  font-family: "RobotoCondensed";
+  font-family: "RobotoCondensed", sans-serif;
   font-weight: 700;
   line-height: 19px;
   text-align: center;
