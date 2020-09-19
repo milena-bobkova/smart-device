@@ -7,6 +7,8 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",
@@ -18,11 +20,10 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
+    "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.4.3",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x"
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
