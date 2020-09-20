@@ -1,0 +1,314 @@
+.feedback {
+  padding: 93px 0 111px;
+  position: relative;
+  background-color: $blue;
+  background-image: url("../img/feedback-bg.svg");
+  background-repeat: no-repeat;
+  background-size: auto 98%;
+  background-position: 110% 220%;
+
+  @include tablet {
+    padding: 80px 0 103px;
+    background-image: none;
+  }
+
+  @include mobile {
+    padding: 30px 0 43px;
+  }
+}
+
+.feedback__wrap {
+  margin: 0 auto;
+
+  position: relative;
+
+  width: calc(100% - 40px);
+  max-width: 1195px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  &::after {
+    position: absolute;
+    z-index: 2;
+    top: 70px;
+    left: -13px;
+
+    width: 511px;
+    height: 288px;
+
+    content: "";
+    background-image: url("../img/paper-airplane-desktop@1x.png");
+    background-size: cover;
+    background-position: center;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/paper-airplane-desktop@2x.png");
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    max-width: 100%;
+
+    justify-content: center;
+  }
+
+  @include mobile {
+    width: calc(100% - 30px);
+  }
+}
+
+.feedback__form {
+  margin-right: 15px;
+  position: relative;
+  z-index: 3;
+
+  width: 570px;
+
+  color: $white;
+  background-color: transparent;
+
+  @include tablet {
+    margin-right: 0;
+    width: 590px;
+  }
+
+  @include mobile {
+    width: 100%;
+    max-width: 590px;
+  }
+}
+
+.feedback__form h2 {
+  @include reset;
+  margin-bottom: 10px;
+
+  width: 100%;
+
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include tablet {
+    margin-bottom: 18px;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  @include mobile {
+    margin-bottom: 14px;
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+}
+
+.feedback__form p {
+  @include reset;
+
+  margin-bottom: 50px;
+  padding-left: 5px;
+
+  width: calc(100% - 5px);
+
+  @include tablet {
+    margin-bottom: 52px;
+  }
+
+  @include mobile {
+    padding-left: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.feedback__input-wrap {
+  margin-left: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include tablet {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.feedback__form label {
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.feedback__form input {
+  margin-bottom: 40px;
+  padding: 14px 18px;
+  width: 270px;
+
+  background-color: rgba($blue, 0.1);
+  border: none;
+  border-radius: none;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  font-family: "PTMono", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  @include tablet {
+    padding: 15px 20px;
+    width: 279px;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+    padding: 15px 17px;
+    width: 100%;
+  }
+}
+
+.feedback__form textarea {
+  margin-bottom: 38px;
+  padding: 13px 18px;
+  width: 570px;
+  min-height: 154px;
+
+  background-color: rgba($white, 0.1);
+  resize: none;
+  border: none;
+  border-radius: none;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  font-family: "PTMono", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  @include tablet {
+    margin-bottom: 42px;
+    padding: 13px 20px;
+    width: 590px;
+    min-height: 160px;
+  }
+
+  @include mobile {
+    padding: 13px 17px;
+    margin-bottom: 27px;
+    width: 100%;
+    min-height: 104px;
+  }
+}
+
+.feedback__button {
+  padding: 14px;
+  width: 270px;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+
+  border: 1px solid $white;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  @include tablet {
+    width: 280px;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+    width: 290px;
+  }
+}
+
+.feedback__checkbox {
+  width: 262px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include tablet {
+    width: 272px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include mobile {
+    justify-content: center;
+  }
+}
+
+.feedback__checkbox input {
+  margin: 0;
+
+  width: 16px;
+  height: 16px;
+
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.feedback__tick-field {
+  padding: 0 4px;
+  margin-right: 16px;
+  margin-top: 5px;
+
+  width: 12px;
+  height: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid $white;
+  cursor: pointer;
+
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.feedback__checkbox svg {
+  fill: none;
+  stroke: $white;
+}
+
+.feedback__checkbox input:not(:checked) + .feedback__tick-field svg {
+  display: none;
+}
+
+.feedback__checkbox input:checked + .feedback__tick-field svg {
+  display: block;
+}
+
+.feedback__checkbox input:hover + .feedback__tick-field,
+.feedback__checkbox input:focus + .feedback__tick-field {
+  outline: 2px solid $grey;
+}

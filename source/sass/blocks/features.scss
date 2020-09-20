@@ -1,8 +1,8 @@
 .features {
   background-color: $white;
   background-image: url("../img/features-bg.svg");
-  background-size: contain;
-  background-position: center 34%;
+  background-size: auto 100%;
+  background-position: 20% 50px;
 }
 
 .features__wrap {
