@@ -539,6 +539,8 @@
 }
 
 .page-header__modal-overlay {
+  display: none;
+
   position: fixed;
   overflow: auto;
   left: 0;
@@ -550,8 +552,6 @@
 }
 
 .page-header__modal {
-  display: none;
-
   position: absolute;
   left: 50%;
   top: 50%;
@@ -603,21 +603,6 @@
   margin-bottom: 30px;
   padding: 15px 24px;
   width: 100%;
-
-  background-color: rgba($white, 0.1);
-  border: none;
-  border-radius: none;
-  box-sizing: border-box;
-  cursor: pointer;
-
-  font-family: "PTMono", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-
-  &::placeholder {
-    color: $white;
-  }
 }
 
 .page-header__modal-form textarea {
@@ -625,66 +610,20 @@
   padding: 13px 24px;
   width: 100%;
   min-height: 104px;
-
-  background-color: rgba($white, 0.1);
-  resize: none;
-  border: none;
-  border-radius: none;
-  box-sizing: border-box;
-  cursor: pointer;
-
-  font-family: "PTMono", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-
-  &::placeholder {
-    color: $white;
-  }
 }
 
 .page-header__modal-button {
   margin-bottom: 35px;
   padding: 14px;
   width: 100%;
-
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $white;
-
-  border: 1px solid $white;
-  box-sizing: border-box;
-  border-radius: 5px;
-
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .page-header__modal-checkbox {
   width: 88%;
 
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
   @include mobile {
     width: 100%;
   }
-}
-
-.page-header__modal-checkbox input {
-  margin: 0;
-
-  width: 16px;
-  height: 16px;
-
-  cursor: pointer;
-  background-color: transparent;
 }
 
 .page-header__modal-tick-field {
@@ -693,31 +632,6 @@
 
   width: 8px;
   height: 14px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 1px solid $white;
-  cursor: pointer;
-}
-
-.page-header__modal-checkbox svg {
-  fill: none;
-  stroke: $white;
-}
-
-.page-header__modal-checkbox input:not(:checked) + .page-header__modal-tick-field svg {
-  display: none;
-}
-
-.page-header__modal-checkbox input:checked + .page-header__modal-tick-field svg {
-  display: block;
-}
-
-.page-header__modal-checkbox input:hover + .page-header__modal-tick-field,
-.page-header__modal-checkbox input:focus + .page-header__modal-tick-field {
-  outline: 2px solid $grey;
 }
 
 .page-header__modal-checkbox-text {

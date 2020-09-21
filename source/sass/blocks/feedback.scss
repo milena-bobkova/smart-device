@@ -152,21 +152,6 @@
   padding: 14px 18px;
   width: 270px;
 
-  background-color: rgba($white, 0.1);
-  border: none;
-  border-radius: none;
-  box-sizing: border-box;
-  cursor: pointer;
-
-  font-family: "PTMono", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-
-  &::placeholder {
-    color: $white;
-  }
-
   @include tablet {
     padding: 15px 20px;
     width: 279px;
@@ -184,22 +169,6 @@
   padding: 13px 18px;
   width: 570px;
   min-height: 154px;
-
-  background-color: rgba($white, 0.1);
-  resize: none;
-  border: none;
-  border-radius: none;
-  box-sizing: border-box;
-  cursor: pointer;
-
-  font-family: "PTMono", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-
-  &::placeholder {
-    color: $white;
-  }
 
   @include tablet {
     margin-bottom: 42px;
@@ -219,22 +188,6 @@
 .feedback__button {
   padding: 14px;
   width: 270px;
-
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $white;
-
-  border: 1px solid $white;
-  box-sizing: border-box;
-  border-radius: 5px;
-
-  background-color: transparent;
-  cursor: pointer;
 
   @include tablet {
     width: 280px;
@@ -265,16 +218,6 @@
   }
 }
 
-.feedback__checkbox input {
-  margin: 0;
-
-  width: 16px;
-  height: 16px;
-
-  cursor: pointer;
-  background-color: transparent;
-}
-
 .feedback__tick-field {
   padding: 0 4px;
   margin-right: 16px;
@@ -283,32 +226,7 @@
   width: 12px;
   height: 14px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 1px solid $white;
-  cursor: pointer;
-
   @include tablet {
     margin-top: 0;
   }
-}
-
-.feedback__checkbox svg {
-  fill: none;
-  stroke: $white;
-}
-
-.feedback__checkbox input:not(:checked) + .feedback__tick-field svg {
-  display: none;
-}
-
-.feedback__checkbox input:checked + .feedback__tick-field svg {
-  display: block;
-}
-
-.feedback__checkbox input:hover + .feedback__tick-field,
-.feedback__checkbox input:focus + .feedback__tick-field {
-  outline: 2px solid $grey;
 }

@@ -78,7 +78,7 @@
       </div>
       <div class="page-header__modal-overlay">
         <div class="page-header__modal">
-          <form class="page-header__modal-form" method="post" enctype="multipart/form-data"
+          <form class="page-header__modal-form form" method="post" enctype="multipart/form-data"
             action="https://echo.htmlacademy.ru" autocomplete="off">
             <h2>Закажите звонок</h2>
             <button class="page-header__modal-close" type="button">
@@ -94,10 +94,11 @@
                 name="modal-phone" placeholder="Телефон" required></label>
             <label for="modal-question-field" aria-label="Ваш вопрос"></label>
             <textarea id="modal-question-field" name="modal-question" placeholder="Ваш вопрос"></textarea>
-            <button class="page-header__modal-button" type="submit" aria-label="Задать вопрос">Отправить</button>
-            <label class="page-header__modal-checkbox" aria-label="Обработка данных">
+            <button class="page-header__modal-button form__button" type="submit"
+              aria-label="Задать вопрос">Отправить</button>
+            <label class="page-header__modal-checkbox form__checkbox" aria-label="Обработка данных">
               <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" required>
-              <span class="page-header__modal-tick-field">
+              <span class="page-header__modal-tick-field form__tick-field">
                 <svg width="8" height="8" viewBox="0 0 8 8">
                   <use xlink:href="#tick-icon"></use>
                 </svg>
@@ -211,8 +212,8 @@
     </section>
     <section class="feedback" id="feedback-form">
       <div class="feedback__wrap">
-        <form class="feedback__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
-          autocomplete="off">
+        <form class="feedback__form form" method="post" enctype="multipart/form-data"
+          action="https://echo.htmlacademy.ru" autocomplete="off">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
           <div class="feedback__input-wrap">
@@ -224,10 +225,11 @@
           <label for="question-field" aria-label="Ваш вопрос"></label>
           <textarea id="question-field" name="question" placeholder="Ваш вопрос"></textarea>
           <div class="feedback__input-wrap">
-            <button class="feedback__button" type="submit" aria-label="Задать вопрос">Задать вопрос</button>
-            <label class="feedback__checkbox" aria-label="Обработка данных">
+            <button class="feedback__button form__button" type="submit" aria-label="Задать вопрос">Задать
+              вопрос</button>
+            <label class="feedback__checkbox form__checkbox" aria-label="Обработка данных">
               <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" required>
-              <span class="feedback__tick-field">
+              <span class="feedback__tick-field form__tick-field">
                 <svg width="8" height="8" viewBox="0 0 8 8">
                   <use xlink:href="#tick-icon"></use>
                 </svg>
