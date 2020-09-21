@@ -3,6 +3,13 @@
   background-image: url("../img/features-bg.svg");
   background-size: auto 100%;
   background-position: 20% 50px;
+
+  @include tablet {
+    background-image: url("../img/polygon-tablet.svg");
+    background-repeat: no-repeat;
+    background-size: auto 70%;
+    background-position: 120% center;
+  }
 }
 
 .features__wrap {

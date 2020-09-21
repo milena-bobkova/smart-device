@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/PTMono-Regular.woff" as="font">
   <link href="css/style.min.css" rel="stylesheet">
 
   <!-- Pixel Glass -->
@@ -74,22 +76,52 @@
           <span>Заказать звонок</span>
         </a>
       </div>
+      <div class="page-header__modal-overlay">
+        <div class="page-header__modal">
+          <form class="page-header__modal-form" method="post" enctype="multipart/form-data"
+            action="https://echo.htmlacademy.ru" autocomplete="off">
+            <h2>Закажите звонок</h2>
+            <button class="page-header__modal-close" type="button">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <use xlink:href="#modal-close-icon"></use>
+              </svg>
+            </button>
+            <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+            <label aria-label="Введите свое имя"><input type="text" name="modal-name" placeholder="Имя"
+                required></label>
+            <label aria-label="Введите телефон"><input type="tel"
+                onkeyup="this.value = this.value.replace(/[^0-9+\d]/g,'');" minlength="11" maxlength="14"
+                name="modal-phone" placeholder="Телефон" required></label>
+            <label for="modal-question-field" aria-label="Ваш вопрос"></label>
+            <textarea id="modal-question-field" name="modal-question" placeholder="Ваш вопрос"></textarea>
+            <button class="page-header__modal-button" type="submit" aria-label="Задать вопрос">Отправить</button>
+            <label class="page-header__modal-checkbox" aria-label="Обработка данных">
+              <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" required>
+              <span class="page-header__modal-tick-field">
+                <svg width="8" height="8" viewBox="0 0 8 8">
+                  <use xlink:href="#tick-icon"></use>
+                </svg>
+              </span>
+              <span class="page-header__modal-checkbox-text">Я согласен на обработку персональных данных</span>
+          </form>
+        </div>
+      </div>
     </nav>
     <section class="page-header__intro">
       <div class="page-header__intro-wrap">
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="page-header__intro-link" aria-label="Бесплатная консультация">
+        <a href="#feedback-form" class="page-header__intro-link" aria-label="Бесплатная консультация">
           <span class="page-header__intro-link-desktop">Получить бесплатную консультацию</span>
           <span class="page-header__intro-link-mobile">Бесплатная консультация</span>
         </a>
-        <a class="page-header__intro-scroll" aria-label="Скролл вниз">Скролл вниз</a>
+        <a href="#features" class="page-header__intro-scroll" aria-label="Скролл вниз">Скролл вниз</a>
       </div>
     </section>
   </header>
   <main>
     <h1 class="visually-hidden">Интернет-магазин печатных плат "Smart Device"</h1>
-    <section class="features">
+    <section class="features" id="features">
       <div class="features__wrap">
         <h2 class="visually-hidden">Преимущества компании</h2>
         <ul class="features__list">
@@ -177,7 +209,7 @@
         </ul>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback-form">
       <div class="feedback__wrap">
         <form class="feedback__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
           autocomplete="off">
