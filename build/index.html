@@ -106,11 +106,12 @@
       <div class="page-header__intro-wrap">
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#feedback-form" class="page-header__intro-link" aria-label="Бесплатная консультация">
+        <a href="#feedback-form" class="page-header__intro-link page-header__anchor" aria-label="Бесплатная консультация">
           <span class="page-header__intro-link-desktop">Получить бесплатную консультацию</span>
           <span class="page-header__intro-link-mobile">Бесплатная консультация</span>
         </a>
-        <a href="#features" class="page-header__intro-scroll" aria-label="Скролл вниз">Скролл вниз</a>
+        <a href="#features" class="page-header__intro-scroll page-header__anchor" aria-label="Скролл вниз">Скролл
+          вниз</a>
       </div>
     </section>
   </header>
@@ -161,9 +162,9 @@
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/2005-tablet@1x.webp 1x, img/2005-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/2005-desktop@1x.webp 1x, img/2005-desktop@2x.webp 2x">
               <!-- 1x: 244px; 2x: 487px -->
-              <source media="(max-width: 1023px)" srcset="img/2005-tablet@1x.png 1x, img/2005-tablet@2x.png 2x">
+              <source media="(max-width: 1023px)" srcset="img/content-2005-tablet@1x.png 1x, img/content-2005-tablet@2x.png 2x">
               <!-- 1x: 220px; 2x: 440px -->
-              <img src="img/2005-desktop@1x.png" srcset="img/2005-desktop@2x.png 2x" width="220" height="317" alt="2005 год">
+              <img src="img/content-2005-desktop@1x.png" srcset="img/content-2005-desktop@2x.png 2x" width="220" height="317" alt="2005 год">
             </picture>
           </div>
           <div class="features__info" id="info">
@@ -265,7 +266,7 @@
           </li>
         </ul>
       </div>
-      <nav class="page-footer__navigation accordion">
+      <nav class="page-footer__navigation accordion accordion--nojs">
         <h2>Разделы сайта</h2>
         <button type="button" class="page-footer__toggle accordion__button"></button>
         <div class="page-footer__menu-wrap accordion__menu">
@@ -296,7 +297,7 @@
           </ul>
         </div>
       </nav>
-      <div class="page-footer__contacts accordion">
+      <div class="page-footer__contacts accordion  accordion--nojs">
         <h2>Наш офис</h2>
         <button type="button" class="page-footer__toggle accordion__button"></button>
         <ul class="page-footer__contacts-list accordion__menu">
@@ -336,7 +337,9 @@
     document.createElement("picture");
   </script>
   <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/anchors.js"></script>
+  <script src="js/accordion.js"></script>
 </body>
 
 </html>

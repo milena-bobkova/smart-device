@@ -1,3 +1,15 @@
+.accordion--nojs {
+  @include mobile {
+    .accordion__menu {
+      display: block;
+    }
+
+    .accordion__button {
+      display: none;
+    }
+  }
+}
+
 .accordion__menu {
   @include mobile {
     &--closed {

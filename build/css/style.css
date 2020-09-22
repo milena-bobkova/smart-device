@@ -1751,6 +1751,12 @@ a {
   outline: 2px solid #666666; }
 
 @media (max-width: 767px) {
+  .accordion--nojs .accordion__menu {
+    display: block; }
+  .accordion--nojs .accordion__button {
+    display: none; } }
+
+@media (max-width: 767px) {
   .accordion__menu--closed {
     display: none; }
   .accordion__menu--opened {
