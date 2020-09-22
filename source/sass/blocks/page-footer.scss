@@ -175,6 +175,10 @@
 
   @include mobile {
     width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -183,11 +187,7 @@
 
   margin-bottom: 27px;
 
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 70%;
 
   font-family: "RobotoCondensed", sans-serif;
   font-weight: 400;
@@ -208,7 +208,7 @@
   justify-content: space-between;
 
   @include tablet {
-    flex-direction: column;
+    display: block;
   }
 
   @include mobile {
@@ -245,6 +245,9 @@
     position: relative;
 
     padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     width: 100%;
 
@@ -268,10 +271,6 @@
 
   margin-bottom: 27px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   font-family: "RobotoCondensed", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -285,6 +284,8 @@
 
   @include mobile {
     margin-bottom: 32px;
+
+    width: 70%;
   }
 }
 
@@ -292,7 +293,10 @@
   @include list-reset;
 
   @include mobile {
-    width: 70%;
+    margin-bottom: 26px;
+    width: 100%;
+
+    display: none;
   }
 }
 
@@ -304,6 +308,7 @@
 }
 
 .page-footer__contacts-list span {
+  width: 70%;
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
@@ -351,7 +356,7 @@
   }
 
   @include mobile {
-    margin-top: 26px;
+    margin-top: 0;
     padding: 29px 0 26px;
 
     flex-direction: column;
@@ -401,43 +406,4 @@
 
 .page-footer__toggle {
   display: none;
-
-  @include mobile {
-    position: relative;
-    display: block;
-
-    width: 16px;
-    height: 16px;
-
-    background-color: transparent;
-    border: none;
-
-    cursor: pointer;
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-
-      content: "";
-
-      width: 16px;
-      height: 1px;
-
-      background-color: #c4c4c4;
-    }
-
-    &::after {
-      position: absolute;
-      top: 0;
-      left: 50%;
-
-      content: "";
-
-      width: 1px;
-      height: 16px;
-
-      background-color: #c4c4c4;
-    }
-  }
 }
