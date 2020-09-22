@@ -75,32 +75,6 @@
           <span>Заказать звонок</span>
         </a>
       </div>
-      <div class="page-header__modal-overlay">
-        <div class="page-header__modal">
-          <form class="page-header__modal-form form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
-            <h2>Закажите звонок</h2>
-            <button class="page-header__modal-close" type="button">
-              <svg width="20" height="20" viewBox="0 0 20 20">
-                <use xlink:href="#modal-close-icon"></use>
-              </svg>
-            </button>
-            <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-            <label aria-label="Введите свое имя"><input type="text" name="modal-name" placeholder="Имя" required=""></label>
-            <label aria-label="Введите телефон"><input type="tel" onkeyup="this.value = this.value.replace(/[^0-9+\d]/g,'');" minlength="11" maxlength="14" name="modal-phone" placeholder="Телефон" required=""></label>
-            <label for="modal-question-field" aria-label="Ваш вопрос"></label>
-            <textarea id="modal-question-field" name="modal-question" placeholder="Ваш вопрос"></textarea>
-            <button class="page-header__modal-button form__button" type="submit" aria-label="Задать вопрос">Отправить</button>
-            <label class="page-header__modal-checkbox form__checkbox" aria-label="Обработка данных">
-              <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" required="">
-              <span class="page-header__modal-tick-field form__tick-field">
-                <svg width="8" height="8" viewBox="0 0 8 8">
-                  <use xlink:href="#tick-icon"></use>
-                </svg>
-              </span>
-              <span class="page-header__modal-checkbox-text">Я согласен на обработку персональных данных</span>
-          </label></form>
-        </div>
-      </div>
     </nav>
     <section class="page-header__intro">
       <div class="page-header__intro-wrap">
@@ -159,8 +133,8 @@
         <article class="features__about">
           <div class="features__picture-wrap">
             <picture>
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/2005-tablet@1x.webp 1x, img/2005-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/2005-desktop@1x.webp 1x, img/2005-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/content-2005-tablet@1x.webp 1x, img/content2005-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content-2005-desktop@1x.webp 1x, img/content-2005-desktop@2x.webp 2x">
               <!-- 1x: 244px; 2x: 487px -->
               <source media="(max-width: 1023px)" srcset="img/content-2005-tablet@1x.png 1x, img/content-2005-tablet@2x.png 2x">
               <!-- 1x: 220px; 2x: 440px -->
@@ -331,6 +305,32 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal-overlay"></div>
+  <div class="modal">
+    <form class="modal__form form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
+      <h2>Закажите звонок</h2>
+      <button class="modal__close" type="button">
+        <svg width="20" height="20" viewBox="0 0 20 20">
+          <use xlink:href="#modal-close-icon"></use>
+        </svg>
+      </button>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <label aria-label="Введите свое имя"><input type="text" name="modal-name" placeholder="Имя" required=""></label>
+      <label aria-label="Введите телефон"><input type="tel" onkeyup="this.value = this.value.replace(/[^0-9+\d]/g,'');" minlength="11" maxlength="14" name="modal-phone" placeholder="Телефон" required=""></label>
+      <label for="modal-question-field" aria-label="Ваш вопрос"></label>
+      <textarea id="modal-question-field" name="modal-question" placeholder="Ваш вопрос"></textarea>
+      <button class="modal__button form__button" type="submit" aria-label="Задать вопрос">Отправить</button>
+      <label class="modal__checkbox form__checkbox" aria-label="Обработка данных">
+        <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" required="">
+        <span class="modal__tick-field form__tick-field">
+          <svg width="8" height="8" viewBox="0 0 8 8">
+            <use xlink:href="#tick-icon"></use>
+          </svg>
+        </span>
+        <span class="modal__checkbox-text">Я согласен на обработку персональных данных</span>
+    </label></form>
+  </div>
 
   <script>
     // Picture element HTML5 shiv
