@@ -20,13 +20,18 @@
   transform: translate(-50%, -50%);
   z-index: 11;
 
-  padding: 30px 39px 36px;
+  padding: 30px 2.03% 36px;
   width: calc(100% - 30px);
   max-width: 490px;
+  max-height: 100vh;
   box-sizing: border-box;
 
   background-color: $blue;
   color: $white;
+
+  @include mobile {
+    padding: 10px 4% 10px;
+  }
 }
 
 .modal__close {
@@ -36,6 +41,21 @@
 
   border: none;
   background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include mobile {
+    top: 15px;
+    right: 8px;
+  }
 }
 
 .modal__form h2 {
@@ -78,10 +98,24 @@
   margin-bottom: 35px;
   padding: 14px;
   width: 100%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .modal__checkbox {
   width: 88%;
+
+  input {
+    width: 16px;
+  }
 
   @include mobile {
     width: 100%;
@@ -89,11 +123,9 @@
 }
 
 .modal__tick-field {
-  padding: 0 4px;
+  width: 20px;
+  height: 18px;
   margin-right: 32px;
-
-  width: 8px;
-  height: 14px;
 }
 
 .modal__checkbox-text {

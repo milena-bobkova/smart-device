@@ -129,7 +129,7 @@
   margin-left: 3px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 
   @include tablet {
     margin-left: 0;
@@ -189,6 +189,15 @@
   padding: 14px;
   width: 270px;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
     width: 280px;
   }
@@ -206,6 +215,10 @@
   align-items: flex-start;
   justify-content: space-between;
 
+  input {
+    width: 16px;
+  }
+
   @include tablet {
     width: 272px;
 
@@ -219,14 +232,15 @@
 }
 
 .feedback__tick-field {
-  padding: 0 4px;
-  margin-right: 16px;
+  margin-right: 20px;
   margin-top: 5px;
-
-  width: 12px;
-  height: 14px;
 
   @include tablet {
     margin-top: 0;
   }
+}
+
+.feedback__checkbox-text {
+  font-size: 14px;
+  line-height: 16px;
 }

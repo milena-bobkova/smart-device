@@ -3,42 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>Smart Device</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Smart Device</title>
+  <meta name="description" content="Сайт производства и продажи печатных плат">
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font">
   <link rel="preload" href="fonts/PTMono-Regular.woff" as="font">
   <link href="css/style.min.css" rel="stylesheet">
-
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("js/pixel-glass/preview/preview-mobile.jpg");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("js/pixel-glass/preview/preview-tablet.jpg");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1024px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("js/pixel-glass/preview/preview-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="js/pixel-glass/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
-
 </head>
 
 <body>
@@ -56,9 +27,6 @@
         </div>
       </div>
       <div class="page-header__menu-list">
-        <button class="page-header__menu-toggle">
-          <span class="page-header__menu-icon"></span>
-        </button>
         <a class="page-header__menu-link page-header__menu-link--mail" href="mailto:info@sd.ru"
           aria-label="Электронная почта">
           <svg width="19" height="14" viewBox="0 0 19 14">
@@ -73,7 +41,7 @@
           <span>+7 (495) 000 52 52</span>
         </a>
         <a class="page-header__button" aria-label="Заказать звонок">
-          <span>Заказать звонок</span>
+          <span class="page-header__menu-icon">Заказать звонок</span>
         </a>
       </div>
     </nav>
@@ -191,9 +159,7 @@
           <p>Мы проконсультируем Вас бесплатно</p>
           <div class="feedback__input-wrap">
             <label aria-label="Введите свое имя"><input type="text" name="name" placeholder="Имя" required></label>
-            <label aria-label="Введите телефон"><input type="tel"
-                onkeyup="this.value = this.value.replace(/[^0-9+\d]/g,'');" minlength="11" maxlength="14" name="phone"
-                placeholder="Телефон" required></label>
+            <label aria-label="Введите телефон"><input type="tel" name="phone" placeholder="Телефон" required></label>
           </div>
           <label for="question-field" aria-label="Ваш вопрос"></label>
           <textarea id="question-field" name="question" placeholder="Ваш вопрос"></textarea>
@@ -327,8 +293,7 @@
       </button>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <label aria-label="Введите свое имя"><input type="text" name="modal-name" placeholder="Имя" required></label>
-      <label aria-label="Введите телефон"><input type="tel" onkeyup="this.value = this.value.replace(/[^0-9+\d]/g,'');"
-          minlength="11" maxlength="14" name="modal-phone" placeholder="Телефон" required></label>
+      <label aria-label="Введите телефон"><input type="tel" name="modal-phone" placeholder="Телефон" required></label>
       <label for="modal-question-field" aria-label="Ваш вопрос"></label>
       <textarea id="modal-question-field" name="modal-question" placeholder="Ваш вопрос"></textarea>
       <button class="modal__button form__button" type="submit" aria-label="Задать вопрос">Отправить</button>
@@ -351,6 +316,8 @@
   <script src="js/popup.js"></script>
   <script src="js/anchors.js"></script>
   <script src="js/accordion.js"></script>
+  <script src="js/inputmask.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

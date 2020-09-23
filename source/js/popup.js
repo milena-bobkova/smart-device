@@ -22,11 +22,26 @@
     isStorageSupport = false;
   }
 
+  form.addEventListener('submit', function () {
+    if (!userName.value || !userPhone.value || !userQuestion.value) {
+      evt.preventDefault();
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('name', userName.value);
+        localStorage.setItem('phone', userPhone.value);
+        localStorage.setItem('question', userQuestion.value);
+      }
+    }
+  });
+
   var closePopup = function () {
     popup.classList.remove('modal--show');
     popupOverlay.classList.remove('modal-overlay--show');
     document.body.classList.remove('modal__fix');
     document.removeEventListener('keydown', escPressHandler);
+    popupOverlay.removeEventListener('click', function () {
+        closePopup();
+    });
   }
 
   var escPressHandler = function (evt) {
@@ -59,20 +74,11 @@
       document.body.classList.add('modal__fix');
       document.addEventListener('keydown', escPressHandler);
       setFocus();
+      popupOverlay.addEventListener('click', function () {
+        closePopup();
+      });
     }
   }
-
-  form.addEventListener('submit', function () {
-    if (!userName.value || !userPhone.value || !userQuestion.value) {
-      evt.preventDefault();
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('name', userName.value);
-        localStorage.setItem('phone', userPhone.value);
-        localStorage.setItem('question', userQuestion.value);
-      }
-    }
-  });
 
   if (popupOpen !== null) {
     popupOpen.addEventListener('click', function (evt) {

@@ -107,72 +107,6 @@
   color: #788891;
 }
 
-.page-header__menu-toggle {
-  display: none;
-
-  @include tablet {
-    position: relative;
-    padding: 0;
-
-    display: block;
-    width: 37px;
-    height: 13px;
-
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-}
-
-.page-header__menu-icon {
-  @include tablet {
-    position: relative;
-
-    &::before,
-    &::after {
-      content: "";
-
-      position: absolute;
-
-      width: 37px;
-      height: 1px;
-
-      background-color: $white;
-      opacity: 1;
-    }
-
-    &::before {
-      top: -9px;
-      left: -21px;
-    }
-
-    &::after {
-      top: 3px;
-      left: -21px;
-    }
-  }
-
-  @include mobile {
-    &::before {
-      left: -23px;
-    }
-
-    &::after {
-      left: -23px;
-    }
-  }
-}
-
 .page-header__menu-list {
   width: 660px;
 
@@ -197,6 +131,15 @@
 
   line-height: 18px;
   color: $white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--mail {
     margin-right: 12%;
@@ -263,8 +206,68 @@
   color: $white;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
-    display: none;
+    position: relative;
+    padding: 0;
+    order: -1;
+
+    display: block;
+    width: 37px;
+    height: 13px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.page-header__menu-icon {
+  @include tablet {
+    position: relative;
+    font-size: 0;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      width: 37px;
+      height: 1px;
+
+      background-color: $white;
+      opacity: 1;
+    }
+
+    &::before {
+      top: -17px;
+      left: -15px;
+    }
+
+    &::after {
+      top: -5px;
+      left: -15px;
+    }
+  }
+
+  @include mobile {
+    &::before {
+      left: -18px;
+    }
+
+    &::after {
+      left: -18px;
+    }
   }
 }
 
@@ -497,6 +500,15 @@
   text-transform: uppercase;
   color: $white;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
     margin-left: 8%;
     margin-bottom: 163px;
@@ -533,6 +545,15 @@
   line-height: 16px;
   color: rgba($white, 0.5);
   white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include tablet {
     display: none;
