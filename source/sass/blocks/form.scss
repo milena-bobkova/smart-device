@@ -5,7 +5,7 @@
   box-sizing: border-box;
   cursor: pointer;
 
-  font-family: "PTMono", sans-serif;
+  font-family: "PTMono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -24,7 +24,7 @@
   cursor: pointer;
   overflow: auto;
 
-  font-family: "PTMono", sans-serif;
+  font-family: "PTMono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -35,12 +35,12 @@
 }
 
 .form__button {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: $white;
 

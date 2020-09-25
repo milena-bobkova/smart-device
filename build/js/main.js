@@ -22,7 +22,7 @@
     isStorageSupport = false;
   }
 
-  form.addEventListener('submit', function () {
+  form.addEventListener('submit', function (evt) {
     if (!userName.value || !userPhone.value || !userQuestion.value) {
       evt.preventDefault();
     } else {
@@ -40,15 +40,15 @@
     document.body.classList.remove('modal__fix');
     document.removeEventListener('keydown', escPressHandler);
     popupOverlay.removeEventListener('click', function () {
-        closePopup();
+      closePopup();
     });
-  }
+  };
 
   var escPressHandler = function (evt) {
     if (evt.key === 'Escape') {
       closePopup();
     }
-  }
+  };
 
   var setFocus = function () {
     userName.focus();
@@ -78,7 +78,7 @@
         closePopup();
       });
     }
-  }
+  };
 
   if (popupOpen !== null) {
     popupOpen.addEventListener('click', function (evt) {
@@ -91,7 +91,7 @@
         openPopup();
       }
     });
-  };
+  }
 
   popupClose.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -103,4 +103,86 @@
       closePopup();
     }
   });
+
+  /******************************/
+
+  var anchors = document.querySelectorAll('.page-header__anchor');
+
+  anchors.forEach(function (anchor) {
+    anchor.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      var blockId = anchor.getAttribute('href').substr(1);
+
+      document.getElementById(blockId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+
+  /******************************/
+
+  var NUMBER_LENGTH = 10;
+
+  var phoneInputs = document.querySelectorAll('[type=tel]');
+
+  var setPhoneMask = function (element) {
+    var inputMask = new window.Inputmask({
+      mask: '+7(999) 999-99-99',
+      placeholder: ' ',
+      jitMasking: true,
+    });
+    inputMask.mask(element);
+  };
+
+  phoneInputs.forEach(function (input) {
+    setPhoneMask(input);
+  });
+
+  var checkNumberValidity = function (inputs) {
+    inputs.forEach(function (input) {
+      input.addEventListener('input', function () {
+        var phoneValue = input.inputmask.unmaskedvalue();
+        if (phoneValue.length < NUMBER_LENGTH) {
+          input.setCustomValidity('Номер телефона введен неверно!');
+        } else {
+          input.setCustomValidity('');
+        }
+      });
+    });
+  };
+
+  checkNumberValidity(phoneInputs);
+
+  /******************************/
+
+  var accordions = document.querySelectorAll('.accordion');
+  var accordionButtons = document.querySelectorAll('.accordion__button');
+  var accordionMenus = document.querySelectorAll('.accordion__menu');
+
+  accordions.forEach(function (accordion) {
+    accordion.classList.remove('accordion--nojs');
+  });
+
+  var accordionGoHandler = function (button, menu) {
+    button.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      menu.classList.toggle('accordion__menu--opened');
+      button.classList.toggle('accordion__button--opened');
+    });
+  };
+
+  var accordionGo = function () {
+    if (accordionButtons.length > 0 && accordionMenus.length > 0) {
+      for (var i = 0; i < accordionMenus.length; i++) {
+        if (accordionButtons[i] !== null && accordionMenus[i] !== null && accordionMenus[i].childNodes.length > 0) {
+          accordionGoHandler(accordionButtons[i], accordionMenus[i]);
+        }
+      }
+    }
+  };
+
+  accordionGo();
+
 })();
