@@ -7,9 +7,9 @@
   var popupOpen = document.querySelector('.page-header__button');
   var popupClose = popup.querySelector('.modal__close');
   var form = popup.querySelector('form');
-  var userName = form.querySelector('[name=modal-name]');
-  var userPhone = form.querySelector('[name=modal-phone]');
-  var userQuestion = form.querySelector('[name=modal-question]');
+  var userName = document.querySelector('[name=modal-name]');
+  var userPhone = document.querySelector('[name=modal-phone]');
+  var userQuestion = document.querySelector('[name=modal-question]');
 
   var isStorageSupport = true;
   var storage = {};
@@ -22,17 +22,19 @@
     isStorageSupport = false;
   }
 
-  form.addEventListener('submit', function (evt) {
-    if (!userName.value || !userPhone.value || !userQuestion.value) {
-      evt.preventDefault();
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('name', userName.value);
-        localStorage.setItem('phone', userPhone.value);
-        localStorage.setItem('question', userQuestion.value);
+  if (form !== null) {
+    form.addEventListener('submit', function (evt) {
+      if (!userName.value || !userPhone.value || !userQuestion.value) {
+        evt.preventDefault();
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem('name', userName.value);
+          localStorage.setItem('phone', userPhone.value);
+          localStorage.setItem('question', userQuestion.value);
+        }
       }
-    }
-  });
+    });
+  }
 
   var closePopup = function () {
     popup.classList.remove('modal--show');
