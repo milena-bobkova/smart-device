@@ -10,6 +10,35 @@
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font">
   <link rel="preload" href="fonts/PTMono-Regular.woff" as="font">
   <link href="css/style.min.css" rel="stylesheet">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("js/pixel-glass/preview/preview-mobile.jpg");
+    }
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("js/pixel-glass/preview/preview-tablet.jpg");
+      }
+    }
+
+    /* Десктоп */
+    @media (min-width: 1024px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("js/pixel-glass/preview/preview-desktop.jpg");
+      }
+    }
+  </style>
+  <link href="js/pixel-glass/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -19,13 +48,13 @@
 
   <header class="page-header">
     <nav class="page-header__navigation">
-      <div class="page-header__logo-wrap">
+      <a class="page-header__logo-wrap">
         <img src="img/logo.svg" width="52" height="52" alt="Логотип интернет-магазина">
         <div class="page-header__logo-text">
           <span class="page-header__logo-name">Smart Device</span>
           <span class="page-header__logo-description">умные технологии</span>
         </div>
-      </div>
+      </a>
       <div class="page-header__menu-list">
         <a class="page-header__menu-link page-header__menu-link--mail" href="mailto:info@sd.ru"
           aria-label="Электронная почта">
@@ -40,7 +69,7 @@
           </svg>
           <span>+7 (495) 000 52 52</span>
         </a>
-        <a class="page-header__button" aria-label="Заказать звонок">
+        <a class="page-header__button" href="#" aria-label="Заказать звонок">
           <span class="page-header__menu-icon">Заказать звонок</span>
         </a>
       </div>
@@ -124,7 +153,7 @@
               (РЖД),
               РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
               светотехники России.</p>
-            <a class="features__link">Подробнее</a>
+            <a class="features__link" href="#">Подробнее</a>
           </div>
         </article>
       </div>
@@ -183,13 +212,13 @@
   <footer class="page-footer">
     <div class="page-footer__wrap">
       <div class="page-footer__logo-block">
-        <div class="page-footer__logo-wrap">
+        <a class="page-footer__logo-wrap">
           <img src="img/logo.svg" width="52" height="52" alt="Логотип интернет-магазина">
           <div class="page-footer__logo-text">
             <span class="page-footer__logo-name">Service Device</span>
             <span class="page-footer__logo-description">умные технологии</span>
           </div>
-        </div>
+        </a>
         <p>1999-2018 SD Service Devices</p>
         <ul class="page-footer__socials">
           <li class="page-footer__socials-item">
