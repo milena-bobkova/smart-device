@@ -32,9 +32,12 @@
 }
 
 .accordion__button {
+  display: none;
+
   @include mobile {
-    position: relative;
     display: block;
+
+    position: relative;
 
     width: 16px;
     height: 16px;
@@ -72,6 +75,10 @@
   }
 
   &--opened {
+    &::before {
+      display: block;
+    }
+
     &::after {
       display: none;
     }

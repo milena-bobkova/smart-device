@@ -1602,9 +1602,6 @@ a {
   .page-footer__copyright-link + p {
     margin: 0; } }
 
-.page-footer__toggle {
-  display: none; }
-
 .form input {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
@@ -1739,34 +1736,38 @@ a {
             justify-content: space-between;
     cursor: pointer; } }
 
-@media (max-width: 767px) {
-  .accordion__button {
-    position: relative;
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer; }
-    .accordion__button::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      content: "";
-      width: 16px;
-      height: 1px;
-      background-color: #c4c4c4; }
-    .accordion__button::after {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      content: "";
-      width: 1px;
-      height: 16px;
-      background-color: #c4c4c4; } }
-
-.accordion__button--opened::after {
+.accordion__button {
   display: none; }
+  @media (max-width: 767px) {
+    .accordion__button {
+      display: block;
+      position: relative;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer; }
+      .accordion__button::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        content: "";
+        width: 16px;
+        height: 1px;
+        background-color: #c4c4c4; }
+      .accordion__button::after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        content: "";
+        width: 1px;
+        height: 16px;
+        background-color: #c4c4c4; } }
+  .accordion__button--opened::before {
+    display: block; }
+  .accordion__button--opened::after {
+    display: none; }
 
 .modal-overlay {
   display: none;

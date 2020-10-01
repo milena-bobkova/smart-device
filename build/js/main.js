@@ -158,28 +158,44 @@
   /******************************/
 
   var accordions = document.querySelectorAll('.accordion');
-  var accordionButtons = document.querySelectorAll('.accordion__click');
-  var accordionMenus = document.querySelectorAll('.accordion__menu');
 
   accordions.forEach(function (accordion) {
     accordion.classList.remove('accordion--nojs');
   });
 
-  var accordionGoHandler = function (button, menu) {
-    button.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      menu.classList.toggle('accordion__menu--opened');
-      button.classList.toggle('accordion__button--opened');
-    });
-  };
-
   var accordionGo = function () {
-    if (accordionButtons.length > 0 && accordionMenus.length > 0) {
-      for (var i = 0; i < accordionMenus.length; i++) {
+    var accordionToggles = document.querySelectorAll('.accordion__click');
+    var accordionButtons = document.querySelectorAll('.accordion__button');
+    var accordionMenus = document.querySelectorAll('.accordion__menu');
+    var index = null;
+
+    var accordionOpen = function (i) {
+      accordionButtons[i].classList.remove('accordion__button--closed');
+      accordionButtons[i].classList.add('accordion__button--opened');
+      accordionMenus[i].classList.remove('accordion__menu--closed');
+      accordionMenus[i].classList.add('accordion__menu--opened');
+    };
+
+    var accordionClose = function (i) {
+      accordionButtons[i].classList.remove('accordion__button--opened');
+      accordionButtons[i].classList.add('accordion__button--closed');
+      accordionMenus[i].classList.remove('accordion__menu--opened');
+      accordionMenus[i].classList.add('accordion__menu--closed');
+    };
+
+    if (accordionToggles.length > 0 && accordionMenus.length > 0) {
+      accordionToggles.forEach(function (button, i) {
         if (accordionButtons[i] !== null && accordionMenus[i] !== null && accordionMenus[i].childNodes.length > 0) {
-          accordionGoHandler(accordionButtons[i], accordionMenus[i]);
+          accordionClose(i);
+          button.addEventListener('click', function () {
+            accordionOpen(i);
+            if (index != null) {
+              accordionClose(index);
+            }
+            index = index === i ? null : i;
+          });
         }
-      }
+      });
     }
   };
 
