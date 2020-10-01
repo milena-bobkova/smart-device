@@ -63,7 +63,7 @@
 }
 
 .feedback__form {
-  margin-right: 15px;
+  margin-right: 13px;
   position: relative;
   z-index: 3;
 
@@ -73,11 +73,12 @@
   background-color: transparent;
 
   @include tablet {
-    margin-right: 0;
+    margin: 0 0 0 3px;
     width: 590px;
   }
 
   @include mobile {
+    margin: 0;
     width: 100%;
     max-width: 590px;
   }
@@ -85,7 +86,7 @@
 
 .feedback__form h2 {
   @include reset;
-  margin-bottom: 10px;
+  margin: 0 0 10px -3px;
 
   width: 100%;
 
@@ -101,7 +102,7 @@
   }
 
   @include mobile {
-    margin-bottom: 14px;
+    margin: 0 0 14px 0;
     font-size: 28px;
     line-height: 140.62%;
   }
@@ -111,7 +112,6 @@
   @include reset;
 
   margin-bottom: 50px;
-  padding-left: 5px;
 
   width: calc(100% - 5px);
 
@@ -122,11 +122,11 @@
   @include mobile {
     padding-left: 0;
     margin-bottom: 25px;
+    width: 100%;
   }
 }
 
 .feedback__input-wrap {
-  margin-left: 3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,19 +148,19 @@
 }
 
 .feedback__form input {
-  margin-bottom: 40px;
-  padding: 14px 18px;
+  margin-bottom: 41.5px;
+  padding: 14px 17px;
   width: 270px;
   border-radius: 0;
 
   @include tablet {
-    padding: 15px 20px;
+    padding: 15px 18px;
     width: 279px;
   }
 
   @include mobile {
     margin-bottom: 30px;
-    padding: 15px 17px;
+    padding: 15px 16px;
     width: 100%;
   }
 }
@@ -173,14 +173,14 @@
   border-radius: 0;
 
   @include tablet {
-    margin-bottom: 42px;
-    padding: 13px 20px;
+    margin-bottom: 40px;
+    padding: 13px 18px;
     width: 590px;
     min-height: 160px;
   }
 
   @include mobile {
-    padding: 13px 17px;
+    padding: 13px 16px;
     margin-bottom: 27px;
     width: 100%;
     min-height: 104px;
@@ -222,7 +222,7 @@
   }
 
   @include tablet {
-    width: 272px;
+    width: 269px;
 
     font-size: 14px;
     line-height: 16px;
@@ -234,8 +234,8 @@
 }
 
 .feedback__tick-field {
-  margin-right: 20px;
-  margin-top: 5px;
+  margin-right: 18px;
+  margin-top: 2px;
 
   @include tablet {
     margin-top: 0;

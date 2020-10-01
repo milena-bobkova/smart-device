@@ -358,9 +358,9 @@
   padding-bottom: 22px;
 
   @include tablet {
-    margin-bottom: 20px;
-    padding-left: 2px;
-    max-height: 66px;
+    margin-bottom: 25px;
+    padding: 0 0 0 2px;
+    max-height: 88px;
 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -378,7 +378,7 @@
 
 .features__link {
   margin-top: 22px;
-  padding: 12px 13px;
+  padding: 14px 13px 13px;
   width: 180px;
 
   display: block;
@@ -407,7 +407,7 @@
   }
 
   @include tablet {
-    margin-top: 42px;
+    margin-top: 40px;
   }
 
   @include mobile {

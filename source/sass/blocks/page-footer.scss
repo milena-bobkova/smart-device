@@ -117,6 +117,10 @@
   width: 148px;
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+    margin: 3px 0 0 0;
+  }
 }
 
 .page-footer__logo-name {
@@ -194,7 +198,7 @@
 .page-footer__navigation h2 {
   @include reset;
 
-  margin-bottom: 25px;
+  margin: 0 0 25px 2px;
 
   width: 70%;
 
@@ -386,7 +390,7 @@
   @include tablet {
     margin-top: 34px;
     padding: 23px 0 24px;
-    width: calc(100% - 50px);
+    width: calc(100% - 53px);
   }
 
   @include mobile {
@@ -433,6 +437,7 @@
 
   @include tablet {
     margin: 0;
+    flex-grow: 0;
   }
 
   @include mobile {

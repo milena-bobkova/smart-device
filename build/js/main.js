@@ -189,7 +189,7 @@
           accordionClose(i);
           button.addEventListener('click', function () {
             accordionOpen(i);
-            if (index != null) {
+            if (index !== null) {
               accordionClose(index);
             }
             index = index === i ? null : i;
