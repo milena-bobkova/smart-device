@@ -675,7 +675,7 @@ a {
   @media (max-width: 767px) {
     .features__item--detective h3 {
       margin-top: 8px;
-      margin-bottom: -5px;
+      margin-bottom: 14px;
       white-space: normal;
       width: 95%; } }
 
@@ -798,7 +798,7 @@ a {
       margin-top: 32px; } }
 
 .services {
-  padding: 87px 0 127px;
+  padding: 87px 0 107px;
   background-color: #1b2d37; }
   @media (max-width: 1023px) {
     .services {
@@ -855,6 +855,7 @@ a {
           justify-content: space-between; }
 
 .services__item {
+  margin-bottom: 20px;
   position: relative;
   width: 31.6%; }
   .services__item::after {
@@ -986,13 +987,13 @@ a {
       background-image: url("../img/accessories-mobile@2x.jpg"); } }
 
 .feedback {
-  padding: 93px 0 111px;
+  padding: 93px 0 113px;
   position: relative;
   background-color: #00b2ff;
   background-image: url("../img/feedback-bg.svg");
   background-repeat: no-repeat;
-  background-size: auto 98%;
-  background-position: 110% 220%; }
+  background-size: auto 97%;
+  background-position: 100% 150%; }
   @media (max-width: 1023px) {
     .feedback {
       padding: 80px 0 103px;
@@ -1120,7 +1121,8 @@ a {
 .feedback__form input {
   margin-bottom: 40px;
   padding: 14px 18px;
-  width: 270px; }
+  width: 270px;
+  border-radius: 0; }
   @media (max-width: 1023px) {
     .feedback__form input {
       padding: 15px 20px;
@@ -1135,7 +1137,8 @@ a {
   margin-bottom: 38px;
   padding: 13px 18px;
   width: 570px;
-  min-height: 154px; }
+  min-height: 154px;
+  border-radius: 0; }
   @media (max-width: 1023px) {
     .feedback__form textarea {
       margin-bottom: 42px;
@@ -1271,7 +1274,7 @@ a {
               justify-content: center; } }
 
 .page-footer__logo-wrap {
-  margin-bottom: 54px;
+  margin-bottom: 53px;
   width: 216px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1279,9 +1282,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   @media (max-width: 1023px) {
     .page-footer__logo-wrap {
       margin-bottom: 0; } }
@@ -1331,9 +1334,6 @@ a {
   font-size: 12px;
   line-height: 14px;
   color: #788891; }
-  @media (max-width: 1023px) {
-    .page-footer__logo-description {
-      margin-bottom: 3px; } }
 
 .page-footer__socials {
   list-style: none;
@@ -1358,13 +1358,16 @@ a {
               justify-content: center; } }
 
 .page-footer__socials-item {
-  margin-right: 16px; }
+  margin-right: 15px; }
   .page-footer__socials-item:hover, .page-footer__socials-item:focus {
     opacity: 0.7; }
   .page-footer__socials-item:active {
     opacity: 0.3; }
   .page-footer__socials-item:last-child {
     margin-right: 0; }
+
+.page-footer__socials-link {
+  display: block; }
 
 .page-footer__navigation {
   width: 36.54%; }
@@ -1386,7 +1389,7 @@ a {
 .page-footer__navigation h2 {
   padding: 0;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   width: 70%;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 400;
@@ -1417,9 +1420,10 @@ a {
 .page-footer__menu-list {
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  margin-right: 3%; }
   .page-footer__menu-list--second {
-    margin-right: 16.67%; }
+    margin-right: 17.5%; }
 
 .page-footer__menu-list a {
   font-weight: 400;
@@ -1462,7 +1466,7 @@ a {
 .page-footer__contacts h2 {
   padding: 0;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -1497,8 +1501,11 @@ a {
   .page-footer__contacts-list a:active {
     opacity: 0.3; }
 
+@media (max-width: 767px) {
+  .page-footer__contacts-item {
+    width: 80%; } }
+
 .page-footer__contacts-list span {
-  width: 70%;
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
@@ -1517,7 +1524,7 @@ a {
 
 .page-footer__copyright-wrap {
   margin: 0 auto;
-  margin-top: 58px;
+  margin-top: 57px;
   padding: 14px 0;
   width: calc(100% - 40px);
   max-width: 1412px;
@@ -1601,10 +1608,10 @@ a {
 .form input {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  border-radius: none;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  cursor: pointer;
+  cursor: text;
   font-family: "PTMono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -1624,10 +1631,10 @@ a {
   background-color: rgba(255, 255, 255, 0.1);
   resize: none;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  cursor: pointer;
+  cursor: text;
   overflow: auto;
   font-family: "PTMono", "Arial", sans-serif;
   font-size: 16px;
@@ -1669,18 +1676,18 @@ a {
           align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  cursor: pointer; }
 
 .form__checkbox input {
   margin: 0;
   width: 16px;
   height: 16px;
-  cursor: pointer;
   background-color: transparent; }
 
 .form__tick-field {
   width: 22px;
-  height: 14px;
+  height: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1720,6 +1727,17 @@ a {
     display: none; }
   .accordion__menu--opened {
     display: block; } }
+
+@media (max-width: 767px) {
+  .accordion__click {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer; } }
 
 @media (max-width: 767px) {
   .accordion__button {
@@ -1819,13 +1837,15 @@ a {
 .modal__form input {
   margin-bottom: 30px;
   padding: 15px 24px;
-  width: 100%; }
+  width: 100%;
+  border-radius: 0; }
 
 .modal__form textarea {
   margin-bottom: 26px;
   padding: 13px 24px;
   width: 100%;
-  min-height: 104px; }
+  min-height: 104px;
+  border-radius: 0; }
 
 .modal__button {
   margin-bottom: 35px;

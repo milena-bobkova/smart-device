@@ -187,16 +187,19 @@
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
           <div class="feedback__input-wrap">
-            <label aria-label="Введите свое имя"><input type="text" name="name" placeholder="Имя" required></label>
-            <label aria-label="Введите телефон"><input type="tel" name="phone" placeholder="Телефон" required></label>
+            <label aria-label="Введите свое имя"><input type="text" name="name" placeholder="Имя" tabindex="1"
+                required></label>
+            <label aria-label="Введите телефон"><input type="tel" name="phone" placeholder="Телефон" tabindex="2"
+                required></label>
           </div>
           <label for="question-field" aria-label="Ваш вопрос"></label>
-          <textarea id="question-field" name="question" placeholder="Ваш вопрос"></textarea>
+          <textarea id="question-field" name="question" placeholder="Ваш вопрос" tabindex="3"></textarea>
           <div class="feedback__input-wrap">
-            <button class="feedback__button form__button" type="submit" aria-label="Задать вопрос">Задать
+            <button class="feedback__button form__button" type="submit" aria-label="Задать вопрос" tabindex="5">Задать
               вопрос</button>
             <label class="feedback__checkbox form__checkbox" aria-label="Обработка данных">
-              <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" required>
+              <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" required
+                tabindex="4">
               <span class="feedback__tick-field form__tick-field">
                 <svg width="8" height="8" viewBox="0 0 8 8">
                   <use xlink:href="#tick-icon"></use>
@@ -230,14 +233,14 @@
           </li>
           <li class="page-footer__socials-item">
             <a href="#" class="page-footer__socials-link" aria-label="Одноклассники">
-              <svg width="26" height="26" viewBox="0 0 26 26">
+              <svg width="27" height="26" viewBox="0 0 27 26">
                 <use xlink:href="#ok-icon"></use>
               </svg>
             </a>
           </li>
           <li class="page-footer__socials-item">
             <a href="#" class="page-footer__socials-link" aria-label="Вконтакте">
-              <svg width="26" height="26" viewBox="0 0 26 26">
+              <svg width="27" height="26" viewBox="0 0 27 26">
                 <use xlink:href="#vk-icon"></use>
               </svg>
             </a>
@@ -245,8 +248,10 @@
         </ul>
       </div>
       <nav class="page-footer__navigation accordion accordion--nojs">
-        <h2>Разделы сайта</h2>
-        <button type="button" class="page-footer__toggle accordion__button"></button>
+        <div class="accordion__click">
+          <h2>Разделы сайта</h2>
+          <button type="button" class="page-footer__toggle accordion__button"></button>
+        </div>
         <div class="page-footer__menu-wrap accordion__menu">
           <ul class="page-footer__menu-list page-footer__menu-list--first">
             <li class="page-footer__menu-item">
@@ -276,8 +281,10 @@
         </div>
       </nav>
       <div class="page-footer__contacts accordion  accordion--nojs">
-        <h2>Наш офис</h2>
-        <button type="button" class="page-footer__toggle accordion__button"></button>
+        <div class="accordion__click">
+          <h2>Наш офис</h2>
+          <button type="button" class="page-footer__toggle accordion__button"></button>
+        </div>
         <ul class="page-footer__contacts-list accordion__menu">
           <li class="page-footer__contacts-item">
             <span>г. Мытищи, Олимпийский проспект, д.10</span>

@@ -1,5 +1,5 @@
 .services {
-  padding: 87px 0 127px;
+  padding: 87px 0 107px;
   background-color: $dark-grey;
 
   @include tablet {
@@ -61,6 +61,7 @@
 }
 
 .services__item {
+  margin-bottom: 20px;
   position: relative;
 
   width: 31.6%;

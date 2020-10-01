@@ -22,6 +22,15 @@
   }
 }
 
+.accordion__click {
+  @include mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}
+
 .accordion__button {
   @include mobile {
     position: relative;

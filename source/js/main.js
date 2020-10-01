@@ -131,9 +131,7 @@
 
   var setPhoneMask = function (element) {
     var inputMask = new window.Inputmask({
-      mask: '+7(999) 999-99-99',
-      placeholder: ' ',
-      jitMasking: true,
+      mask: '+7(999) 999-99-99'
     });
     inputMask.mask(element);
   };
@@ -160,7 +158,7 @@
   /******************************/
 
   var accordions = document.querySelectorAll('.accordion');
-  var accordionButtons = document.querySelectorAll('.accordion__button');
+  var accordionButtons = document.querySelectorAll('.accordion__click');
   var accordionMenus = document.querySelectorAll('.accordion__menu');
 
   accordions.forEach(function (accordion) {

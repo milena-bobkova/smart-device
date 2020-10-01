@@ -72,13 +72,13 @@
 }
 
 .page-footer__logo-wrap {
-  margin-bottom: 54px;
+  margin-bottom: 53px;
 
   width: 216px;
 
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 
   @include tablet {
     margin-bottom: 0;
@@ -133,10 +133,6 @@
   font-size: 12px;
   line-height: 14px;
   color: #788891;
-
-  @include tablet {
-    margin-bottom: 3px;
-  }
 }
 
 .page-footer__socials {
@@ -159,7 +155,7 @@
 }
 
 .page-footer__socials-item {
-  margin-right: 16px;
+  margin-right: 15px;
 
   &:hover,
   &:focus {
@@ -173,6 +169,10 @@
   &:last-child {
     margin-right: 0;
   }
+}
+
+.page-footer__socials-link {
+  display: block;
 }
 
 .page-footer__navigation {
@@ -194,7 +194,7 @@
 .page-footer__navigation h2 {
   @include reset;
 
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 
   width: 70%;
 
@@ -229,9 +229,10 @@
 
 .page-footer__menu-list {
   @include list-reset;
+  margin-right: 3%;
 
   &--second {
-    margin-right: 16.67%;
+    margin-right: 17.5%;
   }
 }
 
@@ -287,7 +288,7 @@
 .page-footer__contacts h2 {
   @include reset;
 
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 400;
@@ -334,8 +335,14 @@
   }
 }
 
+.page-footer__contacts-item {
+  @include mobile {
+    width: 80%;
+  }
+}
+
 .page-footer__contacts-list span {
-  width: 70%;
+
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
@@ -360,7 +367,7 @@
 
 .page-footer__copyright-wrap {
   margin: 0 auto;
-  margin-top: 58px;
+  margin-top: 57px;
   padding: 14px 0;
   width: calc(100% - 40px);
   max-width: 1412px;

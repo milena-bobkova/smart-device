@@ -1,11 +1,11 @@
 .feedback {
-  padding: 93px 0 111px;
+  padding: 93px 0 113px;
   position: relative;
   background-color: $blue;
   background-image: url("../img/feedback-bg.svg");
   background-repeat: no-repeat;
-  background-size: auto 98%;
-  background-position: 110% 220%;
+  background-size: auto 97%;
+  background-position: 100% 150%;
 
   @include tablet {
     padding: 80px 0 103px;
@@ -151,6 +151,7 @@
   margin-bottom: 40px;
   padding: 14px 18px;
   width: 270px;
+  border-radius: 0;
 
   @include tablet {
     padding: 15px 20px;
@@ -169,6 +170,7 @@
   padding: 13px 18px;
   width: 570px;
   min-height: 154px;
+  border-radius: 0;
 
   @include tablet {
     margin-bottom: 42px;

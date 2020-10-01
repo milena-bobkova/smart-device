@@ -1,9 +1,9 @@
 .form input {
   background-color: rgba($white, 0.1);
   border: none;
-  border-radius: none;
+  border-radius: 0;
   box-sizing: border-box;
-  cursor: pointer;
+  cursor: text;
 
   font-family: "PTMono", "Arial", sans-serif;
   font-size: 16px;
@@ -19,9 +19,9 @@
   background-color: rgba($white, 0.1);
   resize: none;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   box-sizing: border-box;
-  cursor: pointer;
+  cursor: text;
   overflow: auto;
 
   font-family: "PTMono", "Arial", sans-serif;
@@ -56,6 +56,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .form__checkbox input {
@@ -64,13 +65,12 @@
   width: 16px;
   height: 16px;
 
-  cursor: pointer;
   background-color: transparent;
 }
 
 .form__tick-field {
   width: 22px;
-  height: 14px;
+  height: 16px;
 
   display: flex;
   justify-content: center;
