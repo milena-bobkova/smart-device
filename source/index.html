@@ -164,7 +164,7 @@
                 required></label>
           </div>
           <label for="question-field" aria-label="Ваш вопрос"></label>
-          <textarea id="question-field" name="question" placeholder="Ваш вопрос" tabindex="3"></textarea>
+          <textarea id="question-field" name="question" placeholder="Ваш вопрос" tabindex="3" required></textarea>
           <div class="feedback__input-wrap">
             <button class="feedback__button form__button" type="submit" aria-label="Задать вопрос" tabindex="5">Задать
               вопрос</button>
@@ -289,23 +289,23 @@
   </footer>
 
   <div class="modal-overlay"></div>
-  <div class="modal">
+  <div class="modal" tabindex="1">
     <form class="modal__form form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
       autocomplete="off">
       <h2>Закажите звонок</h2>
-      <button class="modal__close" type="button">
+      <button class="modal__close" type="button" tabindex="6">
         <svg width="20" height="20" viewBox="0 0 20 20">
           <use xlink:href="#modal-close-icon"></use>
         </svg>
       </button>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <label aria-label="Введите свое имя"><input type="text" name="modal-name" placeholder="Имя" required></label>
-      <label aria-label="Введите телефон"><input type="tel" name="modal-phone" placeholder="Телефон" required></label>
+      <label aria-label="Введите свое имя"><input type="text" name="modal-name" placeholder="Имя" tabindex="1" required></label>
+      <label aria-label="Введите телефон"><input type="tel" name="modal-phone" placeholder="Телефон" tabindex="2" required></label>
       <label for="modal-question-field" aria-label="Ваш вопрос"></label>
-      <textarea id="modal-question-field" name="modal-question" placeholder="Ваш вопрос"></textarea>
-      <button class="modal__button form__button" type="submit" aria-label="Задать вопрос">Отправить</button>
+      <textarea id="modal-question-field" name="modal-question" placeholder="Ваш вопрос" tabindex="3" required></textarea>
+      <button class="modal__button form__button" type="submit" aria-label="Задать вопрос" tabindex="5">Отправить</button>
       <label class="modal__checkbox form__checkbox" aria-label="Обработка данных">
-        <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" required>
+        <input class="visually-hidden" type="checkbox" name="data" aria-label="Обработка данных" tabindex="4" required>
         <span class="modal__tick-field form__tick-field">
           <svg width="8" height="8" viewBox="0 0 8 8">
             <use xlink:href="#tick-icon"></use>

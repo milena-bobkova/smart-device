@@ -745,31 +745,30 @@ a {
       line-height: 140.62%; } }
   @media (max-width: 767px) {
     .features__info h3 {
-      padding-bottom: 23px;
+      padding-bottom: 21px;
       font-size: 28px;
       line-height: 140.62%; } }
 
 .features__info p {
   padding: 0;
   margin: 0;
-  padding-bottom: 22px; }
+  padding-bottom: 20px;
+  line-height: 22px; }
   @media (max-width: 1023px) {
     .features__info p {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       padding: 0 0 0 2px;
-      max-height: 88px;
       overflow: hidden;
-      text-overflow: ellipsis; } }
+      max-height: 88px; } }
   @media (max-width: 767px) {
     .features__info p {
-      margin-bottom: 25px;
+      margin-bottom: 40px;
       padding-left: 2px;
-      max-height: 150px;
       overflow: hidden;
-      text-overflow: ellipsis; } }
+      max-height: 176px; } }
 
 .features__link {
-  margin-top: 22px;
+  margin-top: 19px;
   padding: 14px 13px 13px;
   width: 180px;
   display: block;
@@ -792,10 +791,12 @@ a {
     opacity: 0.3; }
   @media (max-width: 1023px) {
     .features__link {
-      margin-top: 40px; } }
+      margin-top: 40px;
+      margin-left: 3px; } }
   @media (max-width: 767px) {
     .features__link {
-      margin-top: 32px; } }
+      margin-top: -10px;
+      margin-left: 2px; } }
 
 .services {
   padding: 87px 0 107px;
@@ -1119,12 +1120,13 @@ a {
     width: 100%; } }
 
 .feedback__form input {
-  margin-bottom: 41.5px;
+  margin-bottom: 40px;
   padding: 14px 17px;
   width: 270px;
   border-radius: 0; }
   @media (max-width: 1023px) {
     .feedback__form input {
+      margin-bottom: 42px;
       padding: 15px 18px;
       width: 279px; } }
   @media (max-width: 767px) {
@@ -1148,7 +1150,7 @@ a {
   @media (max-width: 767px) {
     .feedback__form textarea {
       padding: 13px 16px;
-      margin-bottom: 27px;
+      margin-bottom: 25px;
       width: 100%;
       min-height: 104px; } }
 
@@ -1192,11 +1194,7 @@ a {
               justify-content: center; } }
 
 .feedback__tick-field {
-  margin-right: 18px;
-  margin-top: 2px; }
-  @media (max-width: 1023px) {
-    .feedback__tick-field {
-      margin-top: 0; } }
+  margin: 2px 16px 0 0; }
 
 .feedback__checkbox-text {
   font-size: 14px;
@@ -1660,7 +1658,7 @@ a {
   font-size: 14px;
   line-height: 16px;
   text-align: center;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -1689,7 +1687,7 @@ a {
   background-color: transparent; }
 
 .form__tick-field {
-  width: 22px;
+  width: 24px;
   height: 16px;
   display: -webkit-box;
   display: -ms-flexbox;

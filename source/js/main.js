@@ -44,6 +44,7 @@
     popupOverlay.removeEventListener('click', function () {
       closePopup();
     });
+    form.reset();
   };
 
   var escPressHandler = function (evt) {

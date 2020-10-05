@@ -148,12 +148,13 @@
 }
 
 .feedback__form input {
-  margin-bottom: 41.5px;
+  margin-bottom: 40px;
   padding: 14px 17px;
   width: 270px;
   border-radius: 0;
 
   @include tablet {
+    margin-bottom: 42px;
     padding: 15px 18px;
     width: 279px;
   }
@@ -181,7 +182,7 @@
 
   @include mobile {
     padding: 13px 16px;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
     width: 100%;
     min-height: 104px;
   }
@@ -234,12 +235,7 @@
 }
 
 .feedback__tick-field {
-  margin-right: 18px;
-  margin-top: 2px;
-
-  @include tablet {
-    margin-top: 0;
-  }
+  margin: 2px 16px 0 0;
 }
 
 .feedback__checkbox-text {
